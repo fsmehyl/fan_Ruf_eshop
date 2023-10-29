@@ -1,0 +1,110 @@
+<%# NAVIGATION %>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="\home">
+      <img src="logoruf.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="\products">
+        Produkty
+      </a>
+
+      <a class="navbar-item" href="\contact">
+        Kontakt
+      </a>
+
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav><br>
+
+
+
+
+<%# PRODUCTS %>
+
+<section id="products" class="columns">
+  <% @products.each do |product| %>
+
+  <div class="column">
+
+<article class="card">
+  <header class="card-image">
+    <figure class="image">
+    <a href="<%= product_path product.id %>">
+      <% if product.image.attached? %>
+  
+      <%= image_tag product.image, :class => 'default', :alt => "photo of product"%> 
+
+    <% else %>
+
+      <%= image_tag image_path "RufProductOne.png" %> 
+  
+    <% end %>
+    </a>
+  </figure>
+  </header>
+  <div class="card-content">
+    <div class="media">
+      
+      <div class="media-content">
+        <p class="title is-4">
+        
+        <%= link_to product.title, product %>
+        
+        </p>
+        <p class="subtitle is-6">
+        
+        <%= number_to_currency product.price, :unit => '€', format: "%n %u" %>
+        
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+        <a href="#", class="button is-link is-fullwidth">Add to cart</a>
+    </div>
+
+
+    <div class="content">
+      
+    <%= product.description.to_plain_text.truncate(150) %>
+
+    </div>
+  </div>
+</article>
+
+  </div>
+
+   <!--- <%= render product %>
+    <p>
+      <%= link_to "Show this product", product %>
+    </p> 
+          -->
+
+  <% end %>
+</section>
+
+<%= link_to "New product", new_product_path, class: "button" %>

@@ -1,0 +1,36 @@
+/**
+    * GENERAL
+    */
+
+body {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: rgb(0, 36, 0);
+}
+
+.title {
+
+    font-weight: 900;
+}
+
+form .is-grouped {
+
+    margin-top: 2rem;
+}
+
+form .trix-content {
+
+    min-height: 12rem;
+}
+
+.edit-links {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.full-star {
+
+    color: orange;
+}
+  

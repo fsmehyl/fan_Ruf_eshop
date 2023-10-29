@@ -1,0 +1,44 @@
+<p class="ratings">
+        <% rating = product.reviews.average(:rating).round %>
+
+    <% for i in 1..5 do  %>
+
+            <% if i <= rating %>
+                <span class="full-star">★</span>
+            <% else %>
+                <span class="no-star">✰</span>
+            <% end %>
+       
+    <% end %>
+
+    <%= product.reviews.count(:rating) %>
+
+</p>
+
+<%#TO DO: POZRIEŤ FAKER A NAPLNIŤ UMELO DATABÁZU %>
+
+<!--
+
+
+<p>
+      <strong>
+    
+        <%= product.reviews.average(:rating) %>
+    
+      </strong>
+    </p>
+
+<h2 class="is-3">
+    
+    <% @product.reviews.each do |review| %>
+      <%= review.content %>
+      <strong><%= review.rating %></strong>
+    <br>
+
+    <% end %>
+
+    </h2>
+
+    -->
+
+    

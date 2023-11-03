@@ -1,6 +1,6 @@
 databases:
-  - name: mysite
-    databaseName: mysite
+  - name: Ruf
+    databaseName: Ruf
     user: Filip
 
 services:

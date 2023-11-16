@@ -1,0 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var reserveSuccessModal = document.getElementById('reserveSuccessModal');
+  reserveSuccessModal.classList.add('is-active');
+
+  reserveSuccessModal.querySelector('.modal-background').addEventListener('click', function () {
+    reserveSuccessModal.classList.remove('is-active');
+  });
+
+  reserveSuccessModal.querySelector('.modal-close').addEventListener('click', function () {
+    reserveSuccessModal.classList.remove('is-active');
+  });
+});

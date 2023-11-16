@@ -1,6 +1,22 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
+  http_basic_authenticate_with name: "ruf_admin", password: "ruf_admin", except: [:index, :show]
+
+  def index
+    @articles = Article.all
+  end
+
+  def reserve
+    # Logika pre spracovanie rezervácie
+    # Tu môžete posielať potrebné informácie do backendu, napr. uložiť do databázy
+
+    # Vráť potvrdenie rezervácie
+    respond_to do |format|
+      format.js { render 'reserve_success.js.erb' } # Vytvorte súbor v app/views/products s názvom reserve_success.js.erb
+    end
+  end
+
   # GET /products or /products.json
   def index
     @products = Product.all
@@ -68,4 +84,3 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:title, :description, :price, :image)
     end
 end
-

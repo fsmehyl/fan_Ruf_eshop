@@ -7,13 +7,29 @@ Rails.application.routes.draw do
 
   get "/contact", to: "pages#contact"
 
+  get "/simulator", to: "pages#simulator"
+
+  get "/product", to: "pages#product"
+
+  
+
+  
+   
+
+
 
   resources :reviews
   resources :products
+  
+
+ 
+
 
 
 
   get "up" => "rails/health#show", as: :rails_health_check
+
+
 
  
 end

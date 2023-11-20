@@ -33,4 +33,15 @@ form .trix-content {
 
     color: orange;
 }
+
+.center {
+
+    text-align: center;
+    color: white;
+}
+
+footer {
+   
+    background-color: black;
+}
   

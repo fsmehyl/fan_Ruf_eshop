@@ -40,12 +40,98 @@
     <%= render "reviews", product: @product if @product.reviews.exists? %> 
     </h2><br>
 
-    <%# ADD TO CARD  %>
-    <div class="columns">
-      <div class="column is-half">
-        <a href="#", class="button is-link is-fullwidth">Add to cart</a>
-      </div>
+    <%# ADD TO CARD %>
+<div class="columns">
+  <div class="column is-half">
+    <button class="button is-link is-fullwidth" id="addToCartButton">Add to cart</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="customerInfoModal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <h3 class="title is-3">Enter Your Information</h3>
+      <!-- Form for customer information -->
+      <%= form_with(url: reserve_product_path(@product), method: :post, remote: true) do |f| %>
+        <div class="field">
+          <%= f.label :first_name, "First Name" %>
+          <%= f.text_field :first_name, class: "input" %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name, "Last Name" %>
+          <%= f.text_field :last_name, class: "input" %>
+        </div>
+        <div class="field">
+          <%= f.label :email, "Email" %>
+          <%= f.email_field :email, class: "input" %>
+        </div>
+        <div class="field">
+          <%= f.label :phone_number, "Phone Number" %>
+          <%= f.text_field :phone_number, class: "input" %>
+        </div>
+        <div class="field">
+          <%= f.submit "Submit", class: "button is-success" %>
+        </div>
+      <% end %>
     </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div class="modal" id="reserveSuccessModal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <h3 class="title is-3">Thank you</h3>
+      <p>Our assistant will contact you within 48 hours</p>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+  var addToCartButton = document.getElementById('addToCartButton');
+  var customerInfoModal = document.getElementById('customerInfoModal');
+  var reserveSuccessModal = document.getElementById('reserveSuccessModal');
+
+  addToCartButton.addEventListener('click', function () {
+    // Open the customer info modal
+    customerInfoModal.classList.add('is-active');
+  });
+
+  // Close the customer info modal when the close button or background is clicked
+  customerInfoModal.querySelector('.modal-background').addEventListener('click', function () {
+    customerInfoModal.classList.remove('is-active');
+  });
+  customerInfoModal.querySelector('.modal-close').addEventListener('click', function () {
+    customerInfoModal.classList.remove('is-active');
+  });
+
+  // When you clicked on SUBMIT
+  document.querySelector('#customerInfoModal form').addEventListener('submit', function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Close the customer info modal
+    customerInfoModal.classList.remove('is-active');
+
+    // Open the reservation success modal
+    reserveSuccessModal.classList.add('is-active');
+  });
+
+  // Close the reservation success modal when the close button or background is clicked
+  reserveSuccessModal.querySelector('.modal-background').addEventListener('click', function () {
+    reserveSuccessModal.classList.remove('is-active');
+  });
+  reserveSuccessModal.querySelector('.modal-close').addEventListener('click', function () {
+    reserveSuccessModal.classList.remove('is-active');
+  });
+});
+
+</script>
 
     
   <%# DESCRIPTION  %>

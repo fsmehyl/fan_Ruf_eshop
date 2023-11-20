@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get "/contact", to: "pages#contact"
 
+  resources :products do
+    post 'reserve', on: :member
+  end
+
 
   resources :reviews
   resources :products

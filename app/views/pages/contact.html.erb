@@ -1,253 +1,4 @@
-<style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
 
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
-
-        
-
-        .navbar-links {
-            display: flex;
-            margin-top: 17px;
-            margin-right: 20px;
-        }
-
-        .navbar-links a {
-            margin-left: 1rem;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .navbar-links a:hover {
-            color: #555;
-        }
-
-        .content-container {
-            text-align: center;
-            padding-top: 5rem;
-        }
-
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: fadeInOut 9s;
-        }
-
-        .logo {
-            opacity: 0;
-            animation: slideInLogo 3s ease-in-out forwards;
-            position: absolute;
-            top: 300px; /* Adjust the top position as needed */
-            left: -100%; /* Initial position off-screen */
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes slideInLogo {
-            0% {
-                left: -100%;
-                opacity: 0;
-            }
-            100% {
-                left: 50%; /* Slide in from the left */
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInOutText {
-            0%, 100% {
-                opacity: 0;
-            }
-            20%, 80% {
-                opacity: 1;
-            }
-        }
-
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: fadeInOut 9s infinite;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% {
-                opacity: 0;
-            }
-            20%, 80% {
-                opacity: 1;
-            }
-        }
-
-        h1 {
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 400px; /* Adjust the margin-top as needed */
-            opacity: 0;
-            animation: slideInText 3s ease-in-out forwards;
-            position: absolute;
-            
-            top: 200px; /* Adjust the top position as needed */
-            left: -100%; /* Initial position off-screen */
-            transform: translateX(-50%);
-        }
-
-        @keyframes slideInText {
-            0% {
-                left: -100%;
-                opacity: 0;
-            }
-            100% {
-                left: 50%; /* Slide in from the left */
-                opacity: 1;
-            }
-        }
-
-        /* Add styles for new sections */
-        .section {
-            padding: 4rem 2rem;
-            background-color: #f8f8f8; /* Adjust background color */
-            color: #333; /* Adjust text color */
-        }
-
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 1.5rem;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .icon {
-        height: 50px;
-         width: 50px;
-        margin: 0px;
-         padding: 0px;
-        }
-
-
-        .contact-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 175px;
-      align-items: center;
-
-}
-
-.contact-info {
-  width: 45%;
-}
-
-.contact-info h2 {
-  color: #333;
-}
-
-.contact-info p {
-  color: #666;
-}
-
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-form {
-  width: 45%;
-  /* Add styling for your contact form if needed */
-}
-
-/* Additional styling for overall layout, font, etc. */
-body {
-  font-family: Arial, sans-serif;
- 
-  margin: 0;
-  padding: 0;
-}
-
-h6 {
-   color: white;
-            font-size: 2em;
-            font-weight: bold;
-            padding-top: 200px;
-}
-
-.Ujos{
-  
-  height: 2000px;
-  width: 2000px;
-}
-
-
-.container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .text {
-      text-align: right;
-    }
-
-    .Ujo {
-      max-width: 100%;
-      height: auto;
-    }
-    .pozadie{
-        position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-    }
-
-    .problem{
-      color: white;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 400px; /* Adjust the margin-top as needed */
-            opacity: 0;
-            animation: slideInText 3s ease-in-out forwards;
-            position: absolute;
-            margin-left: -140px;
-            top: 200px; /* Adjust the top position as needed */
-            left: -100%; /* Initial position off-screen */
-            transform: translateX(-50%);
-    }
-    </style>
-</head>
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -267,7 +18,7 @@ h6 {
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-links">
-                    <%= link_to 'Home', home_path %>
+                    <%= link_to 'Domov', home_path %>
                     <%= link_to 'Produkty', products_path %>
                     <%= link_to 'Simulátor', simulator_path %>
                     <%= link_to 'Kontakt', contact_path %>
@@ -285,13 +36,18 @@ h6 {
     </nav>
 
 
-
+<!--
   <div class="pozadie">
-      <%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
+      <%#<%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
    </div>
+   <video autoplay loop muted playsinline>
+  <source src="<%= asset_path('videoloop.mp4') %>" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
-    <h1>Contact Us: <a href="mailto:info@example.com">info@example.com</a></h1>
+
+    <h1>Kontaktujte Nas: <a href="mailto:info@example.com">info@example.com</a></h1>
     
   
     <div class="contact-container">
@@ -308,9 +64,124 @@ h6 {
    </div>
   
     <div class="contact-form">
-      <!-- Your contact form can go here -->
-    </div>
+       Your contact form can go here 
+    </div> -->
+    <div class="kontakti"> 
+  <section>
   
+<div class="center">
+
+<h1 class="title is-1">KONTAKTUJTE NÁS</h1>
+<h1 class="title is-1">&#11163;</h1>
+</div><br><br><br>
+  <div class="columns">
+  <div class="column is-half">
+  <div  class="center">
+   <p>Pondelok - Piatok</p><br>
+   <p>08:00 - 18:00</p><br>
+   <p>Sobota</p><br>
+   <p>10:00 - 18:00</p><br>
+   <p>Nedeľa / sviatok</p><br>
+   <p>Zatvorené</p><br>
+   <p>Obhliadka podľa dohody</p><br><br>
+   
+   <table class="table">
+    <tr>
+    <th>P. Šmehyl:</td>
+     <td>0044 1552 506 911</td>
+    </tr>
+    <th>P. Kurčík:</td>
+     <td>0044 7829 890 969</td>
+    </tr>
+    <th>P. Varhalík:</td>
+     <td> 0044 7494 501 457</td>
+    </tr>
+    <th>P. Jagelka:</td>
+     <td>0044 7800 890 969</td>
+    </tr>
+   </table>
+
+   
+  </div>
+  </div>
+  <div class="column">
+  <div  class="center">
+  <p>Ak máte otázky týkajúce sa jazdeného vozidla značky Ruf alebo čohokoľvek súvisiaceho, kontaktujte nás
+   nižšie buď formou e-mailu alebo vyplňte dotazník a náš asistent Vás bude kontaktovať.</p><br>
+
+<p>Pod veľkým Dubom 852, 010 03 Žilina-Zástranie</p><br>
+
+<p><strong>INFO@FAN_RUF_ESHOP.COM<strong></p><br><br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20838.047610225356!2d18.777444571725134!3d49.24311606491784!2m3!
+1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145bba9811b085%3A0x592b5d7cfaace49a!2zWsOhc3RyYW5pZSwgMDEwIDAzIMW9aWxpbmEtWsOhc3
+RyYW5pZQ!5e0!3m2!1ssk!2ssk!4v1700570354890!5m2!1ssk!2ssk" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+ referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section><br><br>
+
+<section>
+
+<div class="container">
+  <div class="columns is-justify-content-center">
+    <div class="column">
+      <form method="POST" action="https://public.herotofu.com/v1/5621d390-8851-11ee-95d6-3b4f9a192db8" class="box p-5">
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Your Name</span>
+          <input
+            required
+            name="name"
+            type="text"
+            class="input"
+            placeholder="Štefan Novotný"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Email address</span>
+          <input
+            required
+            name="email"
+            type="email"
+            class="input"
+            placeholder="stefan.novotny@priklad.com"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Phone Number</span>
+          <input
+            required
+            name="phone number"
+            type="text"
+            class="input"
+            placeholder="+4210908224773"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Message (Napíšte v skratke o ktorú jazdenku máte záujem a náš asistent sa Vám ozve do 48 hodín)</span>
+          <textarea
+            required
+            name="message"
+            class="textarea"
+            rows="3"
+            placeholder="Sem napíšte správu"
+          ></textarea>
+        </label>
+
+        <div class="mb-4">
+          <button type="submit" class="button is-link px-4">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</section><br><br>
+</div>
+
   
 
 

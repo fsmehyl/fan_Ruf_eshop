@@ -7,10 +7,12 @@
 
     
     <title>RUF</title>
-    <link rel="icon" href="images/logoruf.png">
+     <%= favicon_link_tag 'logoruf.png' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    
    
   </head>
 
@@ -28,6 +30,14 @@
   </main>
 
   <footer>
+ 
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a><strong><%= link_to "Dotazník", "https://app.lyssna.com/do/80c3faf2db22/b07f", target: "_blank" %></strong></a>
+    </p>
+  </div>
+</footer>
 </footer>
     
   </body>

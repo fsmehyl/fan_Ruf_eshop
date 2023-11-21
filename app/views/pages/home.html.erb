@@ -1,159 +1,9 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
 
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
+  
 
-        
-
-        .navbar-links {
-            display: flex;
-            margin-top: 17px;
-            margin-right: 20px;
-        }
-
-        .navbar-links a {
-            margin-left: 1rem;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .navbar-links a:hover {
-            color: #555;
-        }
-
-        .content-container {
-            text-align: center;
-            padding-top: 5rem;
-        }
-
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: fadeInOut 9s;
-        }
-
-        .logo {
-            opacity: 0;
-            animation: slideInLogo 3s ease-in-out forwards;
-            position: absolute;
-            top: 300px; /* Adjust the top position as needed */
-            left: -100%; /* Initial position off-screen */
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes slideInLogo {
-            0% {
-                left: -100%;
-                opacity: 0;
-            }
-            100% {
-                left: 50%; /* Slide in from the left */
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInOutText {
-            0%, 100% {
-                opacity: 0;
-            }
-            20%, 80% {
-                opacity: 1;
-            }
-        }
-
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: fadeInOut 9s infinite;
-        }
-
-      
-        h1 {
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 400px; /* Adjust the margin-top as needed */
-            opacity: 0;
-            animation: slideInText 3s ease-in-out forwards;
-            position: absolute;
-            top: 200px; /* Adjust the top position as needed */
-            left: -100%; /* Initial position off-screen */
-            transform: translateX(-50%);
-        }
-
-        @keyframes slideInText {
-            0% {
-                left: -100%;
-                opacity: 0;
-            }
-            100% {
-                left: 50%; /* Slide in from the left */
-                opacity: 1;
-            }
-        }
-        
-        /* Add styles for new sections */
-        .section {
-            padding: 4rem 2rem;
-            background-color: #f8f8f8; /* Adjust background color */
-            color: #333; /* Adjust text color */
-        }
-
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 1.5rem;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .icon {
-        height: 50px;
-         width: 50px;
-        margin: 0px;
-         padding: 0px;
-        }
-
-    
-
-        /* Add more styles based on the inspiration website */
-
-    </style>
-</head>
 
 <body>
+    
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
@@ -171,7 +21,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-links">
-                    <%= link_to 'Home', home_path %>
+                    <%= link_to 'Domov', home_path %>
                     <%= link_to 'Produkty', products_path %>
                     <%= link_to 'Simulátor', simulator_path %>
                     <%= link_to 'Kontakt', contact_path %>
@@ -188,44 +38,97 @@
             </div>
         </div>
     </nav>
+    
+    
+    <main>
 
-    <div class="content-container">
-        <div class="background-container">
-            <%= image_tag('car.jpg', alt: 'Popis obrázka') %>
+    
+      <div class="section1">
+                <div class="logo">
+                    <%= image_tag('logoruf.png', alt: 'Logo') %>
+                </div>
+                <div class="image1">
+                  <%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
+                </div>
+      </div>          
+    
+        
+           
+          <div class="H1">
+            <h1>Vitajte vo svete RUF Porsche</h1>
         </div>
-        <div class="logo">
-            <%= image_tag('logoruf.png', alt: 'Popis obrázka') %>
-        </div>
+        
 
-        <h1>Vitajte vo svete RUF Porsche</h1>
+
+<br><section class="section2">
+  
+  <div class="columnss">
+  <div class="column is-half">
+  <div  class="center">
+   <h1 class="title is-1">O nás</h1>
+   <p>RUF Automobile je svetovo uznávaný výrobca a Porsche Tuner.</p><br> 
+   <p>V roku 1987 bol RUF Automobile katapultovaný do myslí automobilových
+    nadšencov, keď CTR „Yellowbird“ získal titul „Najrýchlejšie auto na svete“ a zrodila sa legenda, ktorá inšpirovala budúcu generáciu
+    „Fascinácie RUF“ na celom svete.</p><br> 
+    <p>Dnes ponúkame naše najnovšie vozidlo s uhlíkovou platformou - SCR a ponúkame naše svetoznáme prestavby
+    na klasické podvozky vozidiel Porsche. Vykonávame aj kompletné opravy a servisné práce.</p><br>
+    <p>Spoločnosť RUF - RUF Automobile UK pod vedením
+    Aloisa a Estónska bola založená v roku 2016 ako oficiálny partner RUF Automobile GmBh, fungujúca ako „rozšírenie“ centrály
+    v Pfaffenhausene, ďalšou dvojicou otca a syna - Markom a Richardom Sekulovými - ktorí majú medzi nimi viac ako 40 rokov skúseností
+    v Spojenom kráľovstve a na globálnom trhu automobilového priemyslu.</p>
+  </div>
+  </div>
+  <div class="column">
+    <%= image_tag("image1.jpg", alt: "RUF yellow bird") %>
+  </div>
+</section><br><br>
+
+<section>
+<div class="center">
+ <h1 class="title is-1">JAZDENKY</h1>
+ </div><br><br>
+  <div class="columns">
+  <div class="column is-half">
+  <div  class="center">
+   <%= image_tag("image2.jpg", alt: "RUF yellow bird") %>
+  </div>
+  </div>
+  <div class="column">
+  <div  class="center">
+   <p>Špecializujeme sa na predaj dobre postaraných pre-vlastnených príkladov RUF VIN a RUF konverzií. Predali sme viac príkladov týchto
+    vozidiel ako ktokoľvek iný mimo RUF Pfaffenhausen s prístupom ku globálnej sieti predajcov a kupujúcich vozidiel RUF.</p><br> 
+   <p>Ak máte príklad RUF VIN, RUF Conversion alebo Specialist Porsche, ktoré hľadáte na predaj, <a href="\contact">kontaktujte nás</a></p><br> 
+    <p>Dnes ponúkame naše najnovšie vozidlo s uhlíkovou platformou - SCR a ponúkame naše svetoznáme prestavby
+    na klasické podvozky vozidiel Porsche. Vykonávame aj kompletné opravy a servisné práce.</p><br>
+    <p>Môžeme ponúknuť odborné poradenstvo, pokiaľ ide o ocenenie vášho RUF, históriu RUF, výrobné špecifikácie, servisné poradenstvo...</p><br>
+
+    <br><br><br><br><div class="block">
+        <a href="\products", class="button is-success is-rounded">POZRITE SI NAŠU KOLEKCIU JAZDENIEK</a>
     </div>
-
-
-    <div class="section">
-    <!-- New section 1 -->
-    <div class="section1">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-
-    <!-- New section 2 -->
-    <div class="section2">
-        <h2>Our Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-
-    <!-- New section 3 -->
-    <div class="section2">
-        <h2>Gallery</h2>
-        <!-- Add your gallery content here -->
-    </div>
-
-    <!-- New section 4 -->
-    <div class="section3">
-        <h2>Contact Us</h2>
-        <!-- Add your contact form or information here -->
     </div>
   </div>
+</section><br><br>
+
+<div class="center">
+<h1 class="title is-1">RUF MODELY</h1>
+</div><br>
+
+<section class="section is-small">
+  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+</section>
+
+<section class="section is-small">
+  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+</section>
+
+<section class="section is-small">
+  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+</section>
+
+</main>
+  
+<footer>
+</footer>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -23,7 +24,7 @@
 
   <%= render "partials/notice" %>
 
-  <main class="container is-max-widescreen">
+ <%# <main class="container is-max-widescreen">%>
   
   <%= yield %>
 
@@ -33,12 +34,20 @@
  
   <footer class="footer">
   <div class="content has-text-centered">
+   <p class="center">2023 RUF AUTOMOBILE / FAN_RUF_ESHOP</p>
+</span>
+<p class="center"><a href="\home">Domov</a> /<a href="\products">Produkty</a> /<a href="\simulator">Simulátor</a> / <a href="\contact">Kontakt</a></p>
+<p>
+    <a href="https://www.rufautomobile.co.uk/">RUF automobile UK</a> / 
+    <a href="https://www.ruf-automobile.de/en/">RUF automobile DE</a>
+</p>
+
     <p>
       <a><strong><%= link_to "Dotazník", "https://app.lyssna.com/do/80c3faf2db22/b07f", target: "_blank" %></strong></a>
     </p>
   </div>
 </footer>
-</footer>
+
     
   </body>
 </html>

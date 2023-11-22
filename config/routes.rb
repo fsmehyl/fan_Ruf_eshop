@@ -7,29 +7,17 @@ Rails.application.routes.draw do
 
   get "/contact", to: "pages#contact"
 
-  get "/simulator", to: "pages#simulator"
-
-  get "/product", to: "pages#product"
-
-  
-
-  
-   
-
+  resources :products do
+    post 'reserve', on: :member
+  end
 
 
   resources :reviews
   resources :products
-  
-
- 
-
 
 
 
   get "up" => "rails/health#show", as: :rails_health_check
-
-
 
  
 end

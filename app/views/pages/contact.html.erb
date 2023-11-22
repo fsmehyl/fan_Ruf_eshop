@@ -4,7 +4,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
-                <div class="icon">
+                <div class="icon-nav">
       <%= image_tag('icon.png', alt: 'Icon') %>
     </div>
             </a>
@@ -20,7 +20,7 @@
             <div class="navbar-links">
                     <%= link_to 'Domov', home_path %>
                     <%= link_to 'Produkty', products_path %>
-                    <%= link_to 'Simulátor', simulator_path %>
+                  <%#%  <%= link_to 'Simulátor', simulator_path %>
                     <%= link_to 'Kontakt', contact_path %>
             </div>
            
@@ -34,38 +34,9 @@
             </div>
         </div>
     </nav>
-
-
-<!--
-  <div class="pozadie">
-      <%#<%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
-   </div>
-   <video autoplay loop muted playsinline>
-  <source src="<%= asset_path('videoloop.mp4') %>" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
-
-    <h1>Kontaktujte Nas: <a href="mailto:info@example.com">info@example.com</a></h1>
-    
-  
-    <div class="contact-container">
-      <div class="contact-info">
-        <h2>Address:</h2>
-           <p>123 Main Street, Cityville, Country</p>
-
-      <h2>Email:</h2>
-      <p><a href="mailto:info@example.com">info@example.com</a></p>
-   </div>
-  
-   <div class="Ujo">
-      <%#<%= image_tag('imageujo.jpg', alt: 'Ujo') %>  
-   </div>
-  
-    <div class="contact-form">
-       Your contact form can go here 
-    </div> -->
+<section class="section1-kontakt">
+       <%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
+</section>
     <div class="kontakti"> 
   <section>
   
@@ -104,15 +75,16 @@
    
   </div>
   </div>
-  <div class="column">
+  <div class="column-kontakt">
   <div  class="center">
+  <div class="text-kontakt">
   <p>Ak máte otázky týkajúce sa jazdeného vozidla značky Ruf alebo čohokoľvek súvisiaceho, kontaktujte nás
    nižšie buď formou e-mailu alebo vyplňte dotazník a náš asistent Vás bude kontaktovať.</p><br>
 
 <p>Pod veľkým Dubom 852, 010 03 Žilina-Zástranie</p><br>
 
 <p><strong>INFO@FAN_RUF_ESHOP.COM<strong></p><br><br>
-
+  </div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20838.047610225356!2d18.777444571725134!3d49.24311606491784!2m3!
 1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145bba9811b085%3A0x592b5d7cfaace49a!2zWsOhc3RyYW5pZSwgMDEwIDAzIMW9aWxpbmEtWsOhc3
 RyYW5pZQ!5e0!3m2!1ssk!2ssk!4v1700570354890!5m2!1ssk!2ssk" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"

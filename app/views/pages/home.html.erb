@@ -7,7 +7,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
-                <div class="icon">
+                <div class="icon-nav">
       <%= image_tag('icon.png', alt: 'Icon') %>
     </div>
             </a>
@@ -23,7 +23,7 @@
             <div class="navbar-links">
                     <%= link_to 'Domov', home_path %>
                     <%= link_to 'Produkty', products_path %>
-                    <%= link_to 'Simulátor', simulator_path %>
+                   <%#% <%= link_to 'Simulátor', simulator_path %>
                     <%= link_to 'Kontakt', contact_path %>
             </div>
  
@@ -48,21 +48,20 @@
                     <%= image_tag('logoruf.png', alt: 'Logo') %>
                 </div>
                 <div class="image1">
-                  <%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
+                 <video autoplay muted loop id="myVideo">
+                  <source src="<%= asset_path('videoruf.mp4') %>" type="video/mp4">
+
                 </div>
       </div>          
     
         
            
           <div class="H1">
-            <h1>Vitajte vo svete RUF Porsche</h1>
+            <h1><b>Vitajte vo svete RUF Porsche<b></h1>
         </div>
         
-
-
-<br><section class="section2">
-  
-  <div class="columnss">
+<section class="sekcie-home">
+ <div class="columns">
   <div class="column is-half">
   <div  class="center">
    <h1 class="title is-1">O nás</h1>
@@ -76,25 +75,35 @@
     Aloisa a Estónska bola založená v roku 2016 ako oficiálny partner RUF Automobile GmBh, fungujúca ako „rozšírenie“ centrály
     v Pfaffenhausene, ďalšou dvojicou otca a syna - Markom a Richardom Sekulovými - ktorí majú medzi nimi viac ako 40 rokov skúseností
     v Spojenom kráľovstve a na globálnom trhu automobilového priemyslu.</p>
+
+    <br><br><br><br><div class="block">
+        <a href="https://www.rufautomobile.co.uk/", class="button is-success is-rounded">O "RUFÁKOCH" SA VIAC DOČÍTATE TU</a> 
+    </div>
+
   </div>
   </div>
   <div class="column">
-    <%= image_tag("image1.jpg", alt: "RUF yellow bird") %>
+    <%= image_tag("vertikal_ruf.png", alt: "RUF yellow bird", class: 'home_images') %>
   </div>
-</section><br><br>
+</section>
 
-<section>
-<div class="center">
- <h1 class="title is-1">JAZDENKY</h1>
- </div><br><br>
+
+    
+
+  
+</section>
+
+
+<section class="sekcie-home">
   <div class="columns">
   <div class="column is-half">
   <div  class="center">
-   <%= image_tag("image2.jpg", alt: "RUF yellow bird") %>
+   <%= image_tag("back_ruf.jpg", alt: "RUF yellow bird", class: 'home_images') %>
   </div>
   </div>
   <div class="column">
   <div  class="center">
+    <h1 class="title is-1">JAZDENKY</h1><br><br>
    <p>Špecializujeme sa na predaj dobre postaraných pre-vlastnených príkladov RUF VIN a RUF konverzií. Predali sme viac príkladov týchto
     vozidiel ako ktokoľvek iný mimo RUF Pfaffenhausen s prístupom ku globálnej sieti predajcov a kupujúcich vozidiel RUF.</p><br> 
    <p>Ak máte príklad RUF VIN, RUF Conversion alebo Specialist Porsche, ktoré hľadáte na predaj, <a href="\contact">kontaktujte nás</a></p><br> 
@@ -113,16 +122,16 @@
 <h1 class="title is-1">RUF MODELY</h1>
 </div><br>
 
-<section class="section is-small">
-  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+<section class="sectionmodel">
+  <%= image_tag("model1.jpeg", alt: "RUF yellow bird") %>
 </section>
 
-<section class="section is-small">
-  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+<section class="sectionmodel">
+  <%= image_tag("model2.jpg", alt: "RUF yellow bird") %>
 </section>
 
-<section class="section is-small">
-  <%= image_tag("RufProductOne.png", alt: "RUF yellow bird") %>
+<section class="sectionmodel">
+  <%= image_tag("image4.jpg", alt: "RUF yellow bird") %>
 </section>
 
 </main>

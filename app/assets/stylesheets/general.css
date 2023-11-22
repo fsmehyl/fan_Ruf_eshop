@@ -48,7 +48,7 @@ form .trix-content {
 
 .footer {
 
-    background-color: black;
+    border-radius: 2%;
 }
 
 section {
@@ -71,20 +71,38 @@ table {
 
 video {
     border-radius: 15px; /* nastavení oblé hrany */
-    animation: myAnim 11s ease 0s 1 normal forwards;
+    animation: myAnim 20s ease 0s 15 reverse forwards;
     width: 100%;
     height: auto;
   }
 
-  @keyframes myAnim {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
 
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.home_images {
+
+    border-radius: 2%;
+}
+
+.top_images {
+
+    border-radius: 2%;
+    animation: myAnim 30s ease 0s 200 normal forwards;
+}
+
+.top_top_images {
+
+    border-radius: 2%;
+    animation: myAnim 20s ease 0s 200 normal forwards;
+}

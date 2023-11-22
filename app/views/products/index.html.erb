@@ -1,52 +1,18 @@
 <%# NAVIGATION %>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="\home">
+<nav>
+<div class="tabs is-centered">
+  <ul>
+    <li><a class="is-active" href="\products">Jazdenky</a></li>
+    <li href="#"><a>RUF AUTOMOBILE UK</a></li>
+    <li><a href="\home">
       <img src="logoruf.png" width="112" height="28">
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="\products">
-        Jazdenky
-      </a>
-
-      <a class="navbar-item" href="https://www.rufautomobile.co.uk/">
-        RUF automobile UK
-      </a>
-
-      <a class="navbar-item" href="#">
-        Simulácia jazdy "Rufákmi"
-      </a>
-
-       <a class="navbar-item" href="\contact">
-        Kontakt
-      </a>
-
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav><br>
+    </a></li>
+    <li><a href="#">Simulácia jazdy s "Rufákmi"</a></li>
+    <li><a href="\contact">Kontakt</a></li>
+  </ul>
+</div>
+</nav><br><br> 
 
 
 
@@ -115,4 +81,37 @@
   <% end %>
 </section>
 
-<%= link_to "New product", new_product_path, class: "button" %>
+<%= link_to "New product", new_product_path, class: "button" %><br><br>
+
+<footer class="footer">
+  <nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Tweets</p>
+      <p class="title">3,456</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Following</p>
+      <p class="title">123</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Followers</p>
+      <p class="title">456K</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Likes</p>
+      <p class="title">789</p>
+    </div>
+  </div>
+</nav><br><br>
+  <p class="center">2023 RUF AUTOMOBILE / FAN_RUF_ESHOP</p>
+</span><br><br>
+<p class="center"><a href="\home">Hore</a> / <a href="\products">Jazdenky</a> / <a href="https://www.rufautomobile.co.uk/">RUF automobile UK</a> / 
+<a href="https://www.youtube.com/watch?v=uppiBUyTjrw&ab_channel=MotoGamesTV">Simulácia jazdy "Rufákmi"</a> / <a href="\contact">Kontakt</a></p>
+</footer>

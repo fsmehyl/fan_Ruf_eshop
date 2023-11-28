@@ -40,6 +40,7 @@
     <%= render "reviews", product: @product if @product.reviews.exists? %> 
     </h2><br>
 
+
     <%# RESERVATION %>
   <div class="columns">
   <div class="column is-half">
@@ -52,6 +53,15 @@
   <div class="container">
     <%= @product.description %>
   </div>
+
+  <div>
+  
+  <%# ID  %>
+
+     <p>ID jazdenky:<strong> <%= @product.id %> </strong></p><br>
+     
+  </div>
+
 </header>
 
    <!-- TO DO: UPRAVOVAŤ MôŽU IBA PRIHLÁSENÍ  -->

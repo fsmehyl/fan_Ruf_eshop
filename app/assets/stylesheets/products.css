@@ -28,7 +28,7 @@
 
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 1000px) {
 
     #products {
         display: grid;

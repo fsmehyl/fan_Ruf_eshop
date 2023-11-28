@@ -3,7 +3,7 @@
     */
 
 body {
-    padding: 1rem;
+    padding: 2rem;
     min-height: 100vh;
     background-color: rgb(0, 36, 0);
 }
@@ -53,8 +53,7 @@ form .trix-content {
 
 section {
 
-    background-color: white;
-    border-radius: 2%;
+   
 }
 
 table {
@@ -71,7 +70,7 @@ table {
 
 video {
     border-radius: 15px; /* nastavení oblé hrany */
-    animation: myAnim 20s ease 0s 15 reverse forwards;
+    animation: myAnim 20s ease 0s 200 reverse forwards;
     width: 100%;
     height: auto;
   }

@@ -14,10 +14,10 @@
     object-fit: cover;
 }
 
-/*.card img.default {
+/* .card img.default {
 
     transform: translateY(-40%);
-} */
+}  */
 
 @media screen and (min-width: 640px) {
 

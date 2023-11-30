@@ -39,13 +39,13 @@ form .trix-content {
 
     min-height: 12rem;
 }
-
+*/
 .edit-links {
 
     display: flex;
     justify-content: space-between;
 }
-
+/*
 .full-star {
 
     color: orange;
@@ -200,25 +200,18 @@ form .trix-content {
   
  
   
-/* .image1{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-size: cover;
 
-   
-} */
 .kontakti{
     margin-top: 50px;
     text-align: center;
 }
 
-.produkt{
+ .produkt{
     margin-top: 200px;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 50px;
-}
+} 
 .footer{
     background-color: #004225;
      
@@ -267,6 +260,7 @@ form .trix-content {
     background-size: cover;
     background-position: center;
  }
+ 
 
 
  

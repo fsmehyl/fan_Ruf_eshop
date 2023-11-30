@@ -1,43 +1,160 @@
-<%# NAVIGATION %>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="\home">
-      <img src="logoruf.png" width="112" height="28">
-    </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="\products">
-        Produkty
-      </a>
-
-      <a class="navbar-item" href="\contact">
-        Kontakt
-      </a>
-
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <div class="icon-nav">
+      <%= image_tag('icon.png', alt: 'Icon') %>
     </div>
+            </a>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-      </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-links">
+                    <%= link_to 'Domov', home_path %>
+                    <%= link_to 'Produkty', products_path %>
+                  <%#%  <%= link_to 'Simulátor', simulator_path %>
+                    <%= link_to 'Kontakt', contact_path %>
+            </div>
+           
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary"><strong>Sign up</strong></a>
+                        <a class="button is-light">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="section1-kontakt">
+       <%= image_tag('pozadie.jpg', alt: 'Pozadie') %>
+</section>
+    <div class="kontakti"> 
+  <section>
+  
+<div class="center">
+
+<h1 class="title is-1">KONTAKTUJTE NÁS</h1>
+<h1 class="title is-1">&#11163;</h1>
+</div><br><br><br>
+  <div class="columns">
+  <div class="column is-half">
+  <div  class="center">
+   <p>Pondelok - Piatok</p><br>
+   <p>08:00 - 18:00</p><br>
+   <p>Sobota</p><br>
+   <p>10:00 - 18:00</p><br>
+   <p>Nedeľa / sviatok</p><br>
+   <p>Zatvorené</p><br>
+   <p>Obhliadka podľa dohody</p><br><br>
+   
+   <table class="table">
+    <tr>
+    <th>P. Šmehyl:</td>
+     <td>0044 1552 506 911</td>
+    </tr>
+    <th>P. Kurčík:</td>
+     <td>0044 7829 890 969</td>
+    </tr>
+    <th>P. Varhalík:</td>
+     <td> 0044 7494 501 457</td>
+    </tr>
+    <th>P. Jagelka:</td>
+     <td>0044 7800 890 969</td>
+    </tr>
+   </table>
+
+   
+  </div>
+  </div>
+  <div class="column-kontakt">
+  <div  class="center">
+  <div class="text-kontakt">
+  <p>Ak máte otázky týkajúce sa jazdeného vozidla značky Ruf alebo čohokoľvek súvisiaceho, kontaktujte nás
+   nižšie buď formou e-mailu alebo vyplňte dotazník a náš asistent Vás bude kontaktovať.</p><br>
+
+<p>Pod veľkým Dubom 852, 010 03 Žilina-Zástranie</p><br>
+
+<p><strong>INFO@FAN_RUF_ESHOP.COM<strong></p><br><br>
+  </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20838.047610225356!2d18.777444571725134!3d49.24311606491784!2m3!
+1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145bba9811b085%3A0x592b5d7cfaace49a!2zWsOhc3RyYW5pZSwgMDEwIDAzIMW9aWxpbmEtWsOhc3
+RyYW5pZQ!5e0!3m2!1ssk!2ssk!4v1700570354890!5m2!1ssk!2ssk" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+ referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
-</nav><br>
+</section><br><br>
+
+<section>
+
+<div class="container">
+  <div class="columns is-justify-content-center">
+    <div class="column">
+      <form method="POST" action="https://public.herotofu.com/v1/5621d390-8851-11ee-95d6-3b4f9a192db8" class="box p-5">
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Your Name</span>
+          <input
+            required
+            name="name"
+            type="text"
+            class="input"
+            placeholder="Štefan Novotný"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Email address</span>
+          <input
+            required
+            name="email"
+            type="email"
+            class="input"
+            placeholder="stefan.novotny@priklad.com"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Phone Number</span>
+          <input
+            required
+            name="phone number"
+            type="text"
+            class="input"
+            placeholder="+4210908224773"
+          />
+        </label>
+
+        <label class="is-block mb-4">
+          <span class="is-block mb-2">Message (Napíšte v skratke o ktorú jazdenku máte záujem a náš asistent sa Vám ozve do 48 hodín)</span>
+          <textarea
+            required
+            name="message"
+            class="textarea"
+            rows="3"
+            placeholder="Sem napíšte správu"
+          ></textarea>
+        </label>
+
+        <div class="mb-4">
+          <button type="submit" class="button is-link px-4">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</section><br><br>
+</div>
+
+  
+
 
 

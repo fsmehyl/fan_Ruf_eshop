@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get "/contact", to: "pages#contact"
 
+  get "/simulation", to: "simulation#simulation"
+
   resources :products do
     post 'reserve', on: :member
   end

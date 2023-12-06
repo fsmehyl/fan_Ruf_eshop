@@ -10,4 +10,10 @@ class PagesController < ApplicationController
     @message = "WORKIN ON IT"
 
   end
+
+  def simulation
+
+    @message = "WORKIN ON IT"
+
+  end
 end

@@ -1,23 +1,44 @@
-<!-- NAVIGATION -->
-
-<nav>
-<div class="tabs is-centered">
-  <ul>
-    <li><a href="\products">Jazdenky</a></li>
-    <li><a  href="https://www.rufautomobile.co.uk/">RUF AUTOMOBILE UK</a></li>
-    <li><a href="\home">
-      <img src="logoruf.png" width="112" height="28">
-    </a></li>
-    <li><a href="https://www.ruf-automobile.de/en/">RUF AUTOMOBILE DE</a></li>
-    <li><a href="\contact">Kontakt</a></li>
-  </ul>
-</div>
-</nav><br><br>
+<%# NAVIGATION %>
 
 
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <div class="icon-nav">
+      <%= image_tag('icon.png', alt: 'Icon') %>
+    </div>
+            </a>
 
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-links">
+                    <%= link_to 'Domov', home_path %>
+                    <%= link_to 'Produkty', products_path %>
+                    <%#<%= link_to 'Simulátor', simulator_path %>
+                    <%= link_to 'Kontakt', contact_path %>
+            </div>
+
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary"><strong>Sign up</strong></a>
+                        <a class="button is-light">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 <%# PRODUCTS %>
+<section class="produkt">
+
 
 <section id="products" class="columns">
   <% @products.each do |product| %>
@@ -58,7 +79,7 @@
     </div>
 
     <div class="block">
-        <a href="\contact", class="button is-link is-fullwidth">Like it? Contact us</a>
+        <a href="#", class="button is-link is-fullwidth">REZERVÁCIA</a>
     </div>
 
 
@@ -67,55 +88,35 @@
     <%= product.description.to_plain_text.truncate(150) %>
 
     </div>
-    <div><%# ID  %>
 
-     <p>ID jazdenky:<strong> <%= product.id %> </strong></p><br>
+    <div>
+    
+      <p>ID jazdenky: <strong><%= product.id %></strong></p>
+      
+    
+    </div>
 
   </div>
 </article>
 
   </div>
-
-   <!--- <%= render product %>
+<!--
+    <%= render product %>
     <p>
       <%= link_to "Show this product", product %>
     </p> 
-          -->
+        -->  
 
   <% end %>
+
+</section>
 </section>
 
-<%= link_to "New product", new_product_path, class: "button" %><br><br>
 
-<footer class="footer">
-  <nav class="level">
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Cieľ</p>
-      <p class="title">Jednoznačný</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Kvalita</p>
-      <p class="title">Maximálna</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Zákazníci</p>
-      <p class="title">100% spokojní</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">To je</p>
-      <p class="title">RUF</p>
-    </div>
-  </div>
-</nav><br><br><strong>
-  <p class="center">2023 RUF AUTOMOBILE / FAN_RUF_ESHOP</p>
-</span><br><br>
-<p class="center"><a href="\products">Hore</a> / <a href="\home">Domov</a> / <a href="https://www.rufautomobile.co.uk/">RUF automobile UK</a> / 
-<a href="https://www.ruf-automobile.de/en/">RUF automobile DE</a> / <a href="\contact">Kontakt</a></p></strong>
-</footer>
+<%= link_to "New product", new_product_path, class: "button" %>
+
+
+
+
+
+

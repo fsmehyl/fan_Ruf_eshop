@@ -43,10 +43,10 @@
 
     <p>ID jazdenky: <strong><%= @product.id %></strong></p>
 
-    <%# ADD TO CARD  %>
+    <%# REZERVÁCIA  %>
     <div class="columns">
       <div class="column is-half">
-        <a href="#", class="button is-link is-fullwidth">Add to cart</a>
+      <%= link_to "REZERVÁCIA", contact_path(anchor: "sekcia"), class: "button is-link is-fullwidth" %>
       </div>
     </div>
 

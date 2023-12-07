@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
-  http_basic_authenticate_with name: "ruf_admin", password: "ruf_admin", except: [:index, :show]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+
 
   def index
     @articles = Article.all

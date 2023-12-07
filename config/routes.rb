@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "/simulation", to: "simulation#simulation"
 
+  get "/admin", to: "pages#admin"
+
   resources :products do
     post 'reserve', on: :member
   end

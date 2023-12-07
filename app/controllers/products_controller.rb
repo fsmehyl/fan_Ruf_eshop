@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+
+  http_basic_authenticate_with name: "admin05", password: "0123", except: [:index, :show]
+  
 
 
   def index
@@ -23,8 +25,19 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def admin
+    @products = Product.all
+  end
+
+
+
   # GET /products/1 or /products/1.json
   def show
+
+  end
+
+  def admin_show
+    
   end
 
   # GET /products/new
@@ -34,6 +47,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    
   end
 
   # POST /products or /products.json

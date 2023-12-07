@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-
-  devise_for :admin, controllers: {
-    sessions: 'admin/sessions',
-    registrations: 'admin/registrations'
-  }
-
-
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
   
 
   root "pages#home"
@@ -19,9 +9,17 @@ Rails.application.routes.draw do
 
   get "/simulation", to: "simulation#simulation"
 
+  get "/admin", to: "products#admin"
+
+  get "/admin_show", to: "products#admin_show"
+
+  
+
   resources :products do
     post 'reserve', on: :member
   end
+
+
 
 
   resources :reviews

@@ -1,6 +1,6 @@
 https://mysite-r33l.onrender.com/
 
-(database exspirated)
+(database expired)
 
 
 Project title	:	Fan Ruf Eshop
